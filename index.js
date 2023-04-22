@@ -3,7 +3,7 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 const path = require("path");
-const { shapes } = require("./lib/shapes");
+const { Triangle, Square, Circle } = require("./lib/shapes");
 
 // New Way
 // import inquirer from 'inquirer'
