@@ -1,75 +1,84 @@
 // Old Way
 
 const inquirer = require("inquirer");
-const fs = require('fs')
-//const path = require('path');
- const {shapes} = require("./lib/shapes");
-
+const fs = require("fs");
+const path = require("path");
+const { shapes } = require("./lib/shapes");
 
 // New Way
 // import inquirer from 'inquirer'
-inquirer
-  .prompt([
-    {
-        type: "validate",
-        message: "Enter up to 3 characters:",
-        name: "logoName",
-      },
-      {
-       type: "input",
-       message: "Enter a color keyword or a hexadecimal number for the text?",
-       name: "textColor",
-      },
-      {
-        type: "input",
-        message: "Enter a color keyword or a hexadecimal number for the shape:",
-        name: "shapeColor",
-       },
-       { 
-        type: "list",
-        message: "Choose a shape for your project?", 
-        name: "logoShape", 
-        choices: ["circle", "square", "triangle"] 
-       },
-    
-    ])
+//inquirer
+const questions = [
+  {
+    type: "input",
+    message: "Enter up to 3 characters:",
+    name: "logoName",
+  },
+  {
+    type: "input",
+    message: "Enter a color keyword or a hexadecimal number for the text?",
+    name: "textColor",
+  },
+  {
+    type: "input",
+    message: "Enter a color keyword or a hexadecimal number for the shape:",
+    name: "shapeColor",
+  },
+  {
+    type: "list",
+    message: "Choose a shape for your project?",
+    name: "logoShape",
+    choices: ["circle", "square", "triangle"],
+  },
+];
 
+//    .then(function (data) {
+//    const svgPath = "./lib/shapes";
+//    console.log(data);
+//  fs.writeFile(svgPath, data.userName, function(err){
+//      if (err) throw err
+//   });
+// });
 
-       .then(function (data) {
-       const svgPath = "./lib/shapes";
-       console.log(data);
-     fs.writeFile(svgPath, data.userName, function(err){
-         if (err) throw err
-      });
-    });
+function init() {
+  //console.log("init")
+  inquirer.prompt(questions).then((userResponse) => {
+    console.log("userResponse = ", userResponse);
+    //  writeToFile("logoMaker.svg", shapes(userResponse));
+    let shape;
+    switch (userResponse.logoShape) {
+      case "square":
+        shape = new Square();
+        break;
+      case "triangle":
+        shape = new Triangle();
+        break;
+      default:
+        shape = new Circle();
+        break;
+    }
+    shape.setColor(userResponse.shapeColor);
+    let svg = new SVG();
+    svg.setText(userResponse.logoName,userResponse.textColor);
+    svg.setShape(shape);
+    fs.writeFile("logo.svg",svg.display());
+  })
+  .then(() => {
+    console.log("successfully generated logo.svg")
+  })
+  .catch((err) => {
+    console.log(err);
+  })
+}
 
-    
-    // function init() {
-    //     inquirer.prompt (questions).then((userResponse) => {
-    //       console.log("userResponse = ", userResponse);
-    //       writeToFile("logoMaker.svg", {Circle, Square, Triangle}(userResponse));
-      
-    //     });
-    //   }
+init();
 
-
-
-
-
-    // init()
-
-
-
-
-  //   .then(function (data) {
+//   .then(function (data) {
 //     console.log(data);
 //     fs.writeFile('test.txt', data.userName, function(err){
 //         if (err) throw err
 //     })
 //   });
-
-  
-  
 
 // const arr = [1,2,3,4,5,6]
 // const John = ['John', 'Cena', 15, 'Columbia Unviersity', true, 2]
