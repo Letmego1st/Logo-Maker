@@ -4,7 +4,8 @@ const inquirer = require("inquirer");
 const fs = require("fs");
 const path = require("path");
 const { Triangle, Square, Circle } = require("./lib/shapes");
-
+const SVG = require("./lib/svg")
+const { writeFile } = require("fs/promises");
 // New Way
 // import inquirer from 'inquirer'
 //inquirer
@@ -42,11 +43,11 @@ const questions = [
 
 function init() {
   //console.log("init")
-  inquirer.prompt(questions).then((userResponse) => {
-    console.log("userResponse = ", userResponse);
+  inquirer.prompt(questions).then(({logoName, textColor, shapeColor, logoShape}) => {
+    // console.log("userResponse = ", userResponse);
     //  writeToFile("logoMaker.svg", shapes(userResponse));
     let shape;
-    switch (userResponse.logoShape) {
+    switch (logoShape) {
       case "square":
         shape = new Square();
         break;
@@ -57,11 +58,11 @@ function init() {
         shape = new Circle();
         break;
     }
-    shape.setColor(userResponse.shapeColor);
+    shape.setColor(shapeColor);
     let svg = new SVG();
-    svg.setText(userResponse.logoName,userResponse.textColor);
+    svg.setText(logoName,textColor);
     svg.setShape(shape);
-    fs.writeFile("logo.svg",svg.display());
+    return writeFile("logo.svg",svg.display());
   })
   .then(() => {
     console.log("successfully generated logo.svg")
