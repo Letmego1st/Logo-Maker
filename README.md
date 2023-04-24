@@ -43,4 +43,4 @@ Usage:
 
 <!-- ![](https://github.com/ThomasCalle/Thomas-Object-Oriented-Programming-SVG-Logo-Maker/raw/main/images/generated-logo.svg.png) -->
 
-[![CLICK HERE](http:i.imgur.com/https://github.com/ThomasCalle/Thomas-Object-Oriented-Programming-SVG-Logo-Maker/raw/main/images/generated-logo.svg.png)](https://drive.google.com/file/d/1zKDm3_RNRF0xhl7HIcSfiNnQ_BCQhymY/view)
+[![CLICK HERE](//github.com/ThomasCalle/Thomas-Object-Oriented-Programming-SVG-Logo-Maker/raw/main/images/generated-logo.svg.png)](https://drive.google.com/file/d/1zKDm3_RNRF0xhl7HIcSfiNnQ_BCQhymY/view)
