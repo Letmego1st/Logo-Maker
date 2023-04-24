@@ -39,8 +39,26 @@ WHEN I open the `logo.svg` file in a browser
 
 THEN I am shown a 300x200 pixel image that matches the criteria I entered
 
+Installation:
+
+In the root directory you want to run "npm i" to install all the required packages.
+
 Usage:
 
-![](https://github.com/ThomasCalle/Thomas-Object-Oriented-Programming-SVG-Logo-Maker/raw/main/images/generated-logo.svg.png)
+<!-- ![](https://github.com/ThomasCalle/Thomas-Object-Oriented-Programming-SVG-Logo-Maker/raw/main/images/generated-logo.svg.png) -->
+
+Walk Through Video
 
 [![CLICK HERE](//github.com/ThomasCalle/Thomas-Object-Oriented-Programming-SVG-Logo-Maker/raw/main/images/generated-logo.svg.png)](https://drive.google.com/file/d/1zKDm3_RNRF0xhl7HIcSfiNnQ_BCQhymY/view)
+
+Tests
+
+Its been tested for correct user input, logo text must not exceed 3 characters and must contain atleast 1 character.
+
+It must be a vaild CSS named value or hex code to set the text colour of the logo and the background colour of the logo.
+
+These tests must be passed in order for the logo.svg file to be generated.
+
+Website:
+
+https://letmego1st.github.io/Logo-Maker/
