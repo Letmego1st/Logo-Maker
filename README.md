@@ -41,6 +41,6 @@ THEN I am shown a 300x200 pixel image that matches the criteria I entered
 
 Usage:
 
-<!-- ![](https://github.com/ThomasCalle/Thomas-Object-Oriented-Programming-SVG-Logo-Maker/raw/main/images/generated-logo.svg.png) -->
+![](https://github.com/ThomasCalle/Thomas-Object-Oriented-Programming-SVG-Logo-Maker/raw/main/images/generated-logo.svg.png)
 
 [![CLICK HERE](//github.com/ThomasCalle/Thomas-Object-Oriented-Programming-SVG-Logo-Maker/raw/main/images/generated-logo.svg.png)](https://drive.google.com/file/d/1zKDm3_RNRF0xhl7HIcSfiNnQ_BCQhymY/view)
