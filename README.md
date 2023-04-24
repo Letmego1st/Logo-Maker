@@ -40,5 +40,6 @@ WHEN I open the `logo.svg` file in a browser
 THEN I am shown a 300x200 pixel image that matches the criteria I entered
 
 Usage:
+https://v3.danielmall.com/articles/svg-workflow-for-designers/svg.svg
 
-[![SVG LOGO MAKER](http:i.imgur.com/Screen Shot 2023-04-24 at 5.32.56 AM.png)](https://drive.google.com/file/d/1zKDm3_RNRF0xhl7HIcSfiNnQ_BCQhymY/view)
+[![SVG LOGO MAKER](http:i.imgur.com/https://v3.danielmall.com/articles/svg-workflow-for-designers/svg.svg)](https://drive.google.com/file/d/1zKDm3_RNRF0xhl7HIcSfiNnQ_BCQhymY/view)
