@@ -41,4 +41,6 @@ THEN I am shown a 300x200 pixel image that matches the criteria I entered
 
 Usage:
 
-[![Screen Shot 2023-04-24 at 5.32.56 AM.png](https://drive.google.com/file/d/1zKDm3_RNRF0xhl7HIcSfiNnQ_BCQhymY/view)]
+Screen Shot 2023-04-24 at 5.32.56 AM.png
+
+https://drive.google.com/file/d/1zKDm3_RNRF0xhl7HIcSfiNnQ_BCQhymY/view
